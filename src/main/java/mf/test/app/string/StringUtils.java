@@ -15,7 +15,7 @@ public class StringUtils {
         Arrays.sort(split);
         return Arrays.toString(split).replaceAll(",", "").replaceAll("[^\\w\\s]", "");
     }
-
+    //оценка минимальной дистанции Левенштейна
     public static int countDinst(String str1, String str2) {
         List<String> str1Array = new ArrayList<>(Arrays.asList(str1.split("\\s")));
         List<String> str2Array = new ArrayList<>(Arrays.asList(str2.split("\\s")));
@@ -37,7 +37,7 @@ public class StringUtils {
         }
         return findWay(str1.size(), matrix);
     }
-
+    //поиск минимально возможной комбинации
     private static int findWay(int size, int[][] matrix) {
         List<Integer> all = new ArrayList<>();
         for (int i = 0; i < size; i++)
